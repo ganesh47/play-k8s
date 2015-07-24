@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: frontend
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    name: frontend
+  template:
+    metadata:
+      labels:
+        name: frontend
+    spec:
+      containers:
+        - image: eu.gcr.io/gke-evaluation/frontend:latest
+          name: frontend
+          env:
+            - name: APPLICATION_SECRET
+              value: b5d66b62-2c06-11e5-9d1b-0021cc6e03ec
+          ports:
+            - containerPort: 9000
+              name: http
+          resources:
+            limits:
+              cpu: 0.2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: frontend
+  name: frontend
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 9000
+  selector:
+    name: frontend
