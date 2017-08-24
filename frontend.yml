@@ -14,7 +14,7 @@ spec:
         name: frontend
     spec:
       containers:
-        - image: eu.gcr.io/gke-evaluation/frontend:latest
+        - image: docker.io/ganesh47/sbt_docker_k8s_backend:latest
           name: frontend
           env:
             - name: APPLICATION_SECRET

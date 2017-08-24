@@ -16,5 +16,6 @@ routesGenerator := InjectedRoutesGenerator
 
 dockerBaseImage := "java:8-jre"
 dockerExposedPorts := Seq(9000)
-packageName in Docker := "eu.gcr.io/gke-evaluation/frontend"
+packageName in Docker := "docker.io/ganesh47/sbt_docker_k8s_frontend"
 version in Docker := "latest"
+resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
