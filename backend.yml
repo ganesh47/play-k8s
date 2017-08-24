@@ -14,7 +14,7 @@ spec:
         name: backend
     spec:
       containers:
-        - image: docker.io/ganesh47/sbt_docker_k8s_backend:1.0-SNAPSHOT
+        - image: docker.io/ganesh47/sbt_docker_k8s_backend:latest
           name: backend
           ports:
             - containerPort: 9500
