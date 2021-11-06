@@ -8,7 +8,6 @@ The backend provides a single "service": a `GET` request to `/double?num=x` wher
 will return a `text/plain` response with x number multiplied by 2. Frontend module provides the same
 route, but delegates the actual calculation to the backend module. PRs to change it into anything more
 sensible are welcome!
-
 Building & running locally
 --------------------------
 
