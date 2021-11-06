@@ -1,6 +1,5 @@
 Multi tiered application in Scala with sbt-native-packager, Docker & Kubernetes
 ===============================================================================
-
 The example application is composed of a frontend module which is a Play application created from 
 `play-scala` activator template, and a backend module (acting as a micro-service decoy) created
 from `minimal-akka-scala-seed` template, running an Akka HTTP webserver on port 9500.
